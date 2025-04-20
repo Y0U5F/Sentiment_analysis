@@ -1,37 +1,99 @@
 # Sentiment Analysis for Twitter
 
-A Python-based project for analyzing the sentiment of Twitter tweets, classifying them as positive or negative using NLP and Machine Learning techniques. The project uses the Sentiment140 dataset and includes a Flask web interface for real-time sentiment prediction.
+A Python-based project for analyzing the sentiment of Twitter tweets, classifying them as positive or negative using Natural Language Processing (NLP) and Machine Learning techniques. The project leverages the Sentiment140 dataset and includes a Flask web interface for real-time sentiment prediction.
 
 ## Features
-- Preprocesses text data using NLTK (tokenization, lemmatization, stopword removal).
+
+- Preprocesses tweet text using NLTK (tokenization, lemmatization, stopword removal).
 - Trains machine learning models (Logistic Regression, SVM, Naive Bayes) with TF-IDF vectorization.
 - Provides a Flask web app to input text (word, sentence, or article) and predict sentiment.
-- Evaluates models using accuracy, F1-score, and ROC-AUC.
+- Evaluates model performance using accuracy, F1-score, and ROC-AUC.
 
 ## Installation
-1. Clone the repository:
+
+Follow these steps to set up and run the project locally:
+
+1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/Y0U5F/Sentiment_Analysis.git
-Install dependencies:
+   cd Sentiment_Analysis
+   ```
+
+2. **Install dependencies**:
+
    ```bash
    pip install -r requirements.txt
-Download NLTK data:
+   ```
+
+3. **Download NLTK data**:
+
    ```python
    import nltk
    nltk.download('punkt')
    nltk.download('stopwords')
    nltk.download('wordnet')
+   ```
 
-Run the Flask app:
+4. **Run the Flask app**:
+
    ```bash
-   python app.py
+   python src/app.py
+   ```
 
-Open http://127.0.0.1:5000/ in your browser.
-Requirements
-See requirements.txt for the full list of dependencies.
+5. **Open the app**: Open your browser and navigate to:
 
-Dataset
-The project uses the Sentiment140 dataset with 1.6M tweets.
+   ```
+   http://127.0.0.1:5000/
+   ```
 
-License
-This project is licensed under the MIT License - see the  file for details.
+## Requirements
+
+All dependencies are listed in the `requirements.txt` file. Key libraries include:
+
+- Flask
+- NumPy (&lt;2.0)
+- Pandas
+- Scikit-learn
+- NLTK
+- Joblib
+
+## Dataset
+
+The project uses the Sentiment140 dataset, which contains 1.6 million tweets labeled as positive or negative.
+
+## Project Structure
+
+```
+Sentiment_Analysis/
+├── src/
+│   └── app.py              # Flask application
+├── templates/
+│   └── index.html          # HTML template for the web interface
+├── models/
+│   ├── LRmodel.pkl         # Trained Logistic Regression model
+│   └── vectorizer.pkl      # TF-IDF Vectorizer
+├── requirements.txt        # Project dependencies
+├── README.md               # Project documentation
+├── .gitignore              # Git ignore file
+└── LICENSE                 # MIT License
+```
+
+## Usage
+
+- Access the web interface at `http://127.0.0.1:5000/`.
+- Enter a word, sentence, or article in the text box and click "Analyze" to predict sentiment (Positive or Negative).
+- Example inputs:
+  - Word: "awesome" → Positive
+  - Sentence: "I hate this product" → Negative
+  - Article: "This movie was fantastic! The acting was great..." → Positive
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Acknowledgments
+
+- Sentiment140 for providing the dataset.
+- Flask for the web framework.
+- Scikit-learn and NLTK for machine learning and NLP tools.
