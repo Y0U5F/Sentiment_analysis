@@ -13,20 +13,19 @@ A Python-based project for analyzing the sentiment of Twitter tweets, classifyin
    ```bash
    git clone https://github.com/Y0U5F/Sentiment_Analysis.git
 Install dependencies:
-bash
-
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 Download NLTK data:
-python
+   ```python
+   import nltk
+   nltk.download('punkt')
+   nltk.download('stopwords')
+   nltk.download('wordnet')
 
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
 Run the Flask app:
-bash
+   ```bash
+   python app.py
 
-python app.py
 Open http://127.0.0.1:5000/ in your browser.
 Requirements
 See requirements.txt for the full list of dependencies.
