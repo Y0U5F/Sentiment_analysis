@@ -83,7 +83,7 @@ Sentiment_Analysis/
 
 - Access the web interface at `http://127.0.0.1:5000/`.
 - Enter a word, sentence, or article in the text box and click "Analyze" to predict sentiment (Positive or Negative).
-- ![image](https://github.com/user-attachments/assets/f97f771c-a2fa-4110-8a7d-be642e66a294)
+-![image](https://github.com/user-attachments/assets/f97f771c-a2fa-4110-8a7d-be642e66a294)
 - Example inputs:
   - Word: "awesome" → Positive
   - Sentence: "I hate this product" → Negative
